@@ -1,0 +1,97 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sci-fi_corridor/scene.gltf" type="PackedScene" id=1]
+[ext_resource path="res://scene.lmbake" type="BakedLightmapData" id=2]
+
+[sub_resource type="Environment" id=1]
+background_mode = 1
+ambient_light_source = 2
+tonemap_mode = 2
+auto_exposure_enabled = true
+auto_exposure_scale = 0.1
+ss_reflections_fade_in = 0.184672
+sdfgi_use_multi_bounce = true
+sdfgi_use_occlusion = true
+glow_enabled = true
+fog_enabled = true
+fog_light_energy = 0.2
+fog_density = 0.0012
+volumetric_fog_density = 0.0009
+volumetric_fog_light = Color( 0.235294, 0.486275, 0.294118, 1 )
+volumetric_fog_shadow_filter = 3
+
+[sub_resource type="CameraEffects" id=2]
+override_exposure = 6.76
+
+[sub_resource type="StandardMaterial3D" id=3]
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="SphereMesh" id=4]
+material = SubResource( 3 )
+
+[node name="scene" instance=ExtResource( 1 )]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
+environment = SubResource( 1 )
+camera_effects = SubResource( 2 )
+script = null
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2"]
+transform = Transform( 2.5, 0, 0, 0, -1.09279e-07, 2.5, 0, -2.5, -1.09279e-07, 1.26398, 28.3447, 45.5608 )
+gi_mode = 2
+mesh = SubResource( 4 )
+material/0 = null
+script = null
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="3"]
+transform = Transform( 2.5, 0, 0, 0, -1.09279e-07, 2.5, 0, -2.5, -1.09279e-07, 0, 53.5222, 186.832 )
+light_energy = 2.0
+light_indirect_energy = 2.0
+light_bake_mode = 2
+shadow_enabled = true
+shadow_bias = 0.05
+shadow_transmittance_bias = 0.4
+shadow_blur = 1.53
+spot_range = 37.4626
+spot_angle = 51.6335
+script = null
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." index="4"]
+transform = Transform( 2.5, 0, 0, 0, -1.09279e-07, 2.5, 0, -2.5, -1.09279e-07, 0, 53.5222, 96.1153 )
+light_energy = 2.0
+light_indirect_energy = 2.0
+light_bake_mode = 2
+shadow_enabled = true
+shadow_bias = 0.05
+shadow_transmittance_bias = 0.4
+shadow_blur = 1.53
+spot_range = 37.4626
+spot_angle = 51.6335
+script = null
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." index="5"]
+transform = Transform( 2.5, 0, 0, 0, -1.09279e-07, 2.5, 0, -2.5, -1.09279e-07, 0, 53.5222, 46.0974 )
+light_energy = 2.0
+light_indirect_energy = 2.0
+light_bake_mode = 2
+shadow_enabled = true
+shadow_bias = 0.05
+shadow_transmittance_bias = 0.4
+shadow_blur = 1.53
+spot_range = 37.4626
+spot_angle = 51.6335
+script = null
+
+[node name="Camera3D" type="Camera3D" parent="." index="6"]
+transform = Transform( -2.16983, 0.291959, -1.2069, 0, 2.42991, 0.587813, 1.24172, 0.510181, -2.10899, -15.1044, 34.0718, 147.137 )
+script = null
+
+[node name="BakedLightmap" type="BakedLightmap" parent="." index="7"]
+bounces = 2
+interior = true
+max_texture_size = 32768
+generate_probes_subdiv = 2
+light_data = ExtResource( 2 )
+script = null

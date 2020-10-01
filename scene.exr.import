@@ -1,0 +1,27 @@
+[remap]
+
+importer="2d_array_texture"
+type="StreamTexture2DArray"
+path.s3tc="res://.godot/imported/scene.exr-ec3130c48c3288e90a17f347be2fbda8.s3tc.stexarray"
+path.etc2="res://.godot/imported/scene.exr-ec3130c48c3288e90a17f347be2fbda8.etc2.stexarray"
+metadata={
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://scene.exr"
+dest_files=[ "res://.godot/imported/scene.exr-ec3130c48c3288e90a17f347be2fbda8.s3tc.stexarray", "res://.godot/imported/scene.exr-ec3130c48c3288e90a17f347be2fbda8.etc2.stexarray" ]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/bptc_ldr=0
+compress/channel_pack=1
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/horizontal=1
+slices/vertical=2
